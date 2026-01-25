@@ -13,8 +13,10 @@ export default function SkillsSection() {
     { title: 'Frontend', items: skills.frontend },
     { title: 'Backend', items: skills.backend },
     { title: 'Databases', items: skills.databases },
-    { title: 'Tools & DevOps', items: skills.tools },
-    { title: 'Other', items: skills.other },
+    { title: 'Cloud & DevOps', items: skills.cloud },
+    { title: 'Monitoring', items: skills.monitoring },
+    { title: 'Tools', items: skills.tools },
+    { title: 'Fundamentals', items: skills.fundamentals },
   ];
 
   return (
