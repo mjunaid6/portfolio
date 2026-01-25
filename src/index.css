@@ -112,12 +112,15 @@
 
   html {
     scroll-behavior: smooth;
+    overflow-x: clip;
   }
 
   body {
     @apply bg-background text-foreground antialiased;
     font-family: var(--font-body);
+    overflow-x: hidden;
   }
+
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
@@ -131,9 +134,10 @@
 
 @layer components {
   .section-container {
-    @apply mx-auto w-full px-6;
+    @apply mx-auto w-full px-4 sm:px-6;
     max-width: var(--container-max);
   }
+
 
   .section-padding {
     padding-top: var(--section-padding);

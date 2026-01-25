@@ -47,7 +47,8 @@ export default function Navigation() {
               href="#" 
               className="font-display text-xl font-bold text-gradient"
             >
-              {portfolioData.personal.name.split(' ')[0]}
+              M Junaid
+              {/* {portfolioData.personal.name.split(' ')[0]} */}
             </a>
 
             {/* Desktop Navigation */}

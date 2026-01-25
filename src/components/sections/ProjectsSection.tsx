@@ -68,6 +68,21 @@ export default function ProjectsSection() {
                   </span>
                 ))}
               </div>
+
+              {/* Live Demo Link */}
+              {project.liveUrl && project.liveUrl !== "#" && (
+                <div className='flex justify-end'>
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-flex items-center text-sm text-primary hover:text-primary/80 transition-colors"
+                  >
+                    Live Demo
+                    <ExternalLink className="w-4 h-4 ml-1" />
+                  </a>
+                </div>
+              )}
             </motion.a>
           ))}
         </div>
@@ -97,7 +112,7 @@ export default function ProjectsSection() {
                     <h4 className="font-medium group-hover:text-primary transition-colors truncate">
                       {project.title}
                     </h4>
-                    <p className="text-sm text-muted-foreground truncate">
+                    <p className="text-sm text-muted-foreground truncate-w-full">
                       {project.technologies.join(' • ')}
                     </p>
                   </div>

@@ -84,6 +84,17 @@ export default function HeroSection() {
           >
             <Mail className="w-5 h-5" />
           </a>
+          <a
+            href={personal.socialLinks.leetcode}  
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 rounded-full border border-border hover:border-primary hover:text-primary transition-all duration-300 hover-lift"
+            aria-label="LeetCode"
+          >
+            {/* <img src="https://img.icons8.com/?size=100&id=PZknXs9seWCp&format=png&color=ffffff" alt="LeetCode" className="w-5 h-5 color-white" /> */}
+            <img src="../../../public/leetcode-icon.svg" alt="LeetCode" className="w-5 h-5 color-white" />
+          </a>
+
         </motion.div>
         
         {/* Scroll indicator */}
