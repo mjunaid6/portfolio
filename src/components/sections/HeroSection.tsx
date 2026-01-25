@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 import { portfolioData } from '@/data/portfolio';
-import LeetCodeIcon from '../../../public/leetcode-icon.svg'
+import LeetCodeIcon from '/leetcode-icon.svg'
 export default function HeroSection() {
   const { personal } = portfolioData;
   

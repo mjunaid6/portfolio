@@ -7,10 +7,12 @@ import ProjectsSection from '@/components/sections/ProjectsSection';
 import SkillsSection from '@/components/sections/SkillsSection';
 import ContactSection from '@/components/sections/ContactSection';
 import Footer from '@/components/Footer';
+import CustomCursor from '@/components/CustomCursor';
 
 const Index = () => {
   return (
     <>
+      <CustomCursor />
       <LiquidBackground />
       <Navigation />
       <main>

@@ -11,7 +11,7 @@ export default function Footer() {
             © {currentYear} {portfolioData.personal.name}. All rights reserved.
           </p>
           <p className="text-sm text-muted-foreground">
-            Designed & Built with care
+            Designed & Built with love by Mohammad Junaid
           </p>
         </div>
       </div>
