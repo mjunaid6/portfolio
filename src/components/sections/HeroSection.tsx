@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 import { portfolioData } from '@/data/portfolio';
-
+import LeetCodeIcon from '../../../public/leetcode-icon.svg'
 export default function HeroSection() {
   const { personal } = portfolioData;
   
@@ -91,8 +91,7 @@ export default function HeroSection() {
             className="p-3 rounded-full border border-border hover:border-primary hover:text-primary transition-all duration-300 hover-lift"
             aria-label="LeetCode"
           >
-            {/* <img src="https://img.icons8.com/?size=100&id=PZknXs9seWCp&format=png&color=ffffff" alt="LeetCode" className="w-5 h-5 color-white" /> */}
-            <img src="../../../public/leetcode-icon.svg" alt="LeetCode" className="w-5 h-5 color-white" />
+            <img src={LeetCodeIcon} alt="LeetCode" className="w-5 h-5" />
           </a>
 
         </motion.div>

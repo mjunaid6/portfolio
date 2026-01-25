@@ -71,18 +71,20 @@ export default function ProjectsSection() {
 
               {/* Live Demo Link */}
               {project.liveUrl && project.liveUrl !== "#" && (
-                <div className='flex justify-end'>
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                <div className="flex justify-end">
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      window.open(project.liveUrl, "_blank", "noopener,noreferrer");
+                    }}
                     className="mt-4 inline-flex items-center text-sm text-primary hover:text-primary/80 transition-colors"
                   >
                     Live Demo
                     <ExternalLink className="w-4 h-4 ml-1" />
-                  </a>
+                  </button>
                 </div>
               )}
+
             </motion.a>
           ))}
         </div>
