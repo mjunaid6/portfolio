@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { portfolioData } from '@/data/portfolio';
-import { Mail, MapPin, Github, Linkedin, Twitter, ArrowUpRight } from 'lucide-react';
+import { Mail, MapPin, Github, Linkedin, ArrowUpRight } from 'lucide-react';
 
 export default function ContactSection() {
   const { personal } = portfolioData;
@@ -88,15 +88,6 @@ export default function ContactSection() {
             aria-label="LinkedIn"
           >
             <Linkedin className="w-5 h-5" />
-          </a>
-          <a
-            href={personal.socialLinks.twitter}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 rounded-full border border-border hover:border-primary hover:text-primary transition-all duration-300"
-            aria-label="Twitter"
-          >
-            <Twitter className="w-5 h-5" />
           </a>
         </motion.div>
       </div>

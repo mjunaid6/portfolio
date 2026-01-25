@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowDown, Github, Linkedin, Twitter, Mail } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 import { portfolioData } from '@/data/portfolio';
 
 export default function HeroSection() {
@@ -76,15 +76,6 @@ export default function HeroSection() {
             aria-label="LinkedIn"
           >
             <Linkedin className="w-5 h-5" />
-          </a>
-          <a
-            href={personal.socialLinks.twitter}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 rounded-full border border-border hover:border-primary hover:text-primary transition-all duration-300 hover-lift"
-            aria-label="Twitter"
-          >
-            <Twitter className="w-5 h-5" />
           </a>
           <a
             href={`mailto:${personal.email}`}
