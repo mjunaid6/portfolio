@@ -53,7 +53,7 @@ export default function SkillsSection() {
                 {category.items.map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-2 text-sm rounded-lg bg-secondary/50 text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-colors cursor-default"
+                    className="px-3 py-2 text-sm rounded-lg bg-secondary/50 text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
                   >
                     {skill}
                   </span>
