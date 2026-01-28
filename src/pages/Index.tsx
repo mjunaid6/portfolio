@@ -8,6 +8,7 @@ import SkillsSection from '@/components/sections/SkillsSection';
 import ContactSection from '@/components/sections/ContactSection';
 import Footer from '@/components/Footer';
 import CustomCursor from '@/components/CustomCursor';
+import FloatingResumeCTA from '@/components/sections/FloatingResumeCTA';
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <LiquidBackground />
       <Navigation />
       <main>
+        <FloatingResumeCTA/>
         <HeroSection />
         <AboutSection />
         <ExperienceSection />
