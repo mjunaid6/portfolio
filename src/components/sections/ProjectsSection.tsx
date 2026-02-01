@@ -24,7 +24,7 @@ export default function ProjectsSection() {
     <section
       id="projects"
       ref={ref}
-      className="section-padding section-container"
+      className="section-padding section-container overflow-x-hidden"
     >
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
@@ -52,7 +52,7 @@ export default function ProjectsSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 + index * 0.1 }}
-              className="group cursor-pointer relative p-6 rounded-xl card-gradient
+              className="group relative p-6 rounded-xl card-gradient
                          border border-border hover:border-primary/50
                          transition-all duration-300 hover-lift"
             >

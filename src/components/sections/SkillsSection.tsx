@@ -1,12 +1,27 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { portfolioData } from '@/data/portfolio';
 
 export default function SkillsSection() {
   const { skills } = portfolioData;
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [activeSkill, setActiveSkill] = useState<string | null>(null);
+
+  const isTouchDevice =
+  typeof window !== "undefined" &&
+  window.matchMedia("(hover: none) and (pointer: coarse)").matches;
+
+
+  useEffect(() => {
+    if (!isTouchDevice) return;
+    const close = () => setActiveSkill(null);
+    window.addEventListener("click", close);
+    return () => window.removeEventListener("click", close);
+  }, []);
+
+
 
   const skillCategories = [
     { title: 'Languages', items: skills.languages },
@@ -20,7 +35,7 @@ export default function SkillsSection() {
   ];
 
   return (
-    <section id="skills" className="section-padding section-container" ref={ref}>
+    <section id="skills" className="section-padding section-container " ref={ref}>
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <motion.div
@@ -51,17 +66,52 @@ export default function SkillsSection() {
               </h3>
               <div className="flex flex-wrap gap-2">
                 {category.items.map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-3 py-2 text-sm rounded-lg bg-secondary/50 text-secondary-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
-                  >
-                    {skill}
-                  </span>
+                  <div
+  key={skill.name}
+  onClick={(e) => {
+    e.stopPropagation();
+    if (!isTouchDevice) return;
+    setActiveSkill(activeSkill === skill.name ? null : skill.name);
+  }}
+
+  className="
+    group relative overflow-hidden
+    px-3 py-2
+    text-sm font-medium
+    rounded-lg
+    bg-secondary/40
+    text-secondary-foreground
+    min-w-[120px]
+  "
+>
+  {/* Progress Fill */}
+  <div
+    className={`
+      absolute inset-y-0 left-0
+      bg-primary/80
+      rounded-lg
+      transition-all duration-500 ease-out
+      ${
+        activeSkill === skill.name
+          ? "w-[var(--progress)]"
+          : "w-0 group-hover:w-[var(--progress)]"
+      }
+    `}
+    style={{ "--progress": `${skill.proficiency}%` } as React.CSSProperties}
+  />
+
+  {/* Skill Name */}
+  <span className="relative z-10">{skill.name}</span>
+</div>
+
                 ))}
               </div>
             </motion.div>
           ))}
         </div>
+
+        
+
       </div>
     </section>
   );

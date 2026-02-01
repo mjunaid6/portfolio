@@ -112,15 +112,61 @@ export const portfolioData = {
   ],
 
   skills: {
-    languages: ["Java", "JavaScript (ES6+)", "Python", "HTML5", "CSS3"],
-    frontend: ["React.js", "Redux", "React Router", "Tailwind CSS"],
-    backend: ["Spring Boot", "REST APIs", "JPA/Hibernate", "Apache Kafka"],
-    databases: ["MySQL", "MongoDB", "DynamoDB"],
-    cloud: ["AWS (EC2, S3, IAM)", "Docker", "GCP", "Firebase"],
-    monitoring: ["Prometheus", "Grafana"],
-    tools: ["Git", "GitHub", "Postman", "Figma"],
-    fundamentals: ["Data Structures & Algorithms", "OOP", "OS", "DBMS", "Computer Networks"],
+    languages: [
+      { name: "Java", proficiency: 92 },
+      { name: "JavaScript (ES6+)", proficiency: 80 },
+      { name: "Python", proficiency: 70 },
+      { name: "HTML5", proficiency: 90 },
+      { name: "CSS3", proficiency: 90 },
+    ],
+
+    frontend: [
+      { name: "React.js", proficiency: 86 },
+      { name: "React Router", proficiency: 82 },
+      { name: "Tailwind CSS", proficiency: 90 },
+    ],
+
+    backend: [
+      { name: "Spring Boot", proficiency: 90 },
+      { name: "REST APIs", proficiency: 88 },
+      { name: "JPA / Hibernate", proficiency: 89 },
+      { name: "Apache Kafka", proficiency: 60 },
+    ],
+
+    databases: [
+      { name: "MySQL", proficiency: 82 },
+      { name: "MongoDB", proficiency: 65 },
+      { name: "DynamoDB", proficiency: 60 },
+    ],
+
+    cloud: [
+      { name: "AWS (EC2, S3, IAM)", proficiency: 75 },
+      { name: "Docker", proficiency: 70 },
+      { name: "GCP", proficiency: 65 },
+      { name: "Firebase", proficiency: 80 },
+    ],
+
+    monitoring: [
+      { name: "Prometheus", proficiency: 62 },
+      { name: "Grafana", proficiency: 64 },
+    ],
+
+    tools: [
+      { name: "Git", proficiency: 80 },
+      { name: "GitHub", proficiency: 82 },
+      { name: "Postman", proficiency: 85 },
+      { name: "Figma", proficiency: 65 },
+    ],
+
+    fundamentals: [
+      { name: "Data Structures & Algorithms", proficiency: 93 },
+      { name: "Object-Oriented Programming", proficiency: 97 },
+      { name: "Operating Systems", proficiency: 97 },
+      { name: "DBMS", proficiency: 97 },
+      { name: "Computer Networks", proficiency: 97 },
+    ],
   },
+
 
   education: [
     {
