@@ -10,9 +10,6 @@ export default function Footer() {
           <p className="text-sm text-muted-foreground">
             © {currentYear} {portfolioData.personal.name}. All rights reserved.
           </p>
-          <p className="text-sm text-muted-foreground">
-            Designed & Built with love by Mohammad Junaid
-          </p>
         </div>
       </div>
     </footer>

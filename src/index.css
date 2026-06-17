@@ -28,7 +28,6 @@
   display: block;
 }
 
-
 @media (hover: none) {
   .custom-cursor {
     display: none;

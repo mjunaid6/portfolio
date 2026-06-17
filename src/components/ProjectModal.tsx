@@ -1,13 +1,16 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ExternalLink, Github } from "lucide-react";
 import { useEffect } from "react";
+import '../index.css';
 
 type Project = {
   title: string;
   description: string;
+  features: string[];
   technologies: string[];
   link?: string;
   liveUrl?: string;
+  images?: string[];
 };
 
 type Props = {
@@ -38,9 +41,9 @@ export default function ProjectModal({ project, onClose }: Props) {
         <motion.div
           className="
             bg-card border border-border rounded-xl
-            w-full max-w-lg
-            max-h-[90vh] overflow-y-auto
-            p-5 sm:p-6
+            w-full max-w-2xl
+            max-h-[90vh] overflow-y-auto scrollbar-none
+            p-5 sm:p-8
             relative
           "
           initial={{ scale: 0.95, opacity: 0 }}
@@ -65,7 +68,7 @@ export default function ProjectModal({ project, onClose }: Props) {
           </button>
 
           {/* Title */}
-          <h3 className="text-xl sm:text-2xl font-display font-semibold mb-3">
+          <h3 className="text-xl sm:text-2xl font-display font-semibold mb-3 text-primary">
             {project.title}
           </h3>
 
@@ -73,6 +76,16 @@ export default function ProjectModal({ project, onClose }: Props) {
           <p className="text-sm sm:text-base text-muted-foreground mb-6">
             {project.description}
           </p>
+
+          {/* Features */}
+          <div className="mb-6">
+            <h4 className="font-semibold mb-2">Key Features</h4>
+            <ul className="list-disc list-inside text-sm sm:text-base text-muted-foreground space-y-1">
+              {project.features.map((feature, index) => (
+                <li key={index}>{feature}</li>
+              ))}
+            </ul>
+          </div>
 
           {/* Tech */}
           <div className="flex flex-wrap gap-2 mb-6">
@@ -118,6 +131,21 @@ export default function ProjectModal({ project, onClose }: Props) {
               </a>
             )}
           </div>
+
+          {/* Images */}
+          {project.images && project.images.length > 0 && (
+            <div className="mt-6">
+            <h3 className="text-xl font-semibold mb-4">Screenshots</h3>
+              {project.images?.map((image, index) => (
+                <img
+                  key={index}
+                  src={image}
+                  onClick={() => window.open(image, "_blank", "noopener,noreferrer")}
+                  alt={`${project.title} ${index + 2}`}
+                  className="m-2 rounded-lg border border-gray-200 dark:border-gray-700 hover:opacity-80 transition"
+                />
+              ))}
+            </div>)}
         </motion.div>
       </motion.div>
     </AnimatePresence>

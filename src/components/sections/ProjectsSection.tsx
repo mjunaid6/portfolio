@@ -71,7 +71,7 @@ export default function ProjectsSection() {
 
               {/* Description */}
               <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-                {project.description}
+                {project.description.slice(0, 150)}...
               </p>
 
               {/* Technologies */}
